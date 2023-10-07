@@ -82,7 +82,7 @@ def main():
 
 		data_to_save = {}
 
-				for output in grading_outputs:
+		for output in grading_outputs:
 			identifier = output.str_including_solutions().split()[1].strip(
 				'():')  # 获取 "performance", "correctness" 等作为 identifier
 			overall_score = float(output.str_including_solutions().split()[4])  # 获取 Overall Score 的值
