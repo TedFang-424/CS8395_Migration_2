@@ -90,7 +90,7 @@ def main():
 			data_to_save[identifier] = overall_score
 
 		# 计算平均值
-		keys_to_average = ["performance", "correctness", "humanlikeness", "memory_efficiency", "coding_convention"]
+		keys_to_average = ["humanlikeness", "memory_efficiency", "coding_convention"]
 		average_score = sum(data_to_save[key] for key in keys_to_average) / len(keys_to_average)
 
 		# 将平均值添加到字典中
