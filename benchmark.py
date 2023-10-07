@@ -83,16 +83,11 @@ def main():
 		data_to_save = []
 
 		for output in grading_outputs:
-			identifier = output.str_including_solutions().split()[1]  # 获取 "performance", "correctness" 等作为 identifier
+			identifier = output.str_including_solutions().split()[1].strip(
+				'():')  # 获取 "performance", "correctness" 等作为 identifier
 			overall_score = float(output.str_including_solutions().split()[4])  # 获取 Overall Score 的值
-			solutions_count = int(output.str_including_solutions().split()[7])  # 获取 Solutions Count 的值
 
-			data_entry = {
-				'identifier': identifier,
-				'Overall Score': overall_score,
-				'Solutions Count': solutions_count
-			}
-			data_to_save.append(data_entry)
+			data_to_save[identifier] = overall_score
 	with open('output.json', 'w') as file:
 		json.dump(data_to_save, file)
 	print("Done")
