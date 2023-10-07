@@ -1,0 +1,6 @@
+{
+  "name": "XiXiLeoTed",
+  "model": "openai",
+  "run_test": "python3 benchmark.py --base_path problem_sets/bugfixing/ --grade --model gpt-4 --grader performance correctness humanlikeness memory_efficiency coding_convention",
+  "tags": ["memory","convention","style"]
+}
