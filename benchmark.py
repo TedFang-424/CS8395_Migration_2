@@ -80,7 +80,7 @@ def main():
 
 		print()
 
-		data_to_save = []
+		data_to_save = {}
 
 		for output in grading_outputs:
 			identifier = output.str_including_solutions().split()[1].strip(
